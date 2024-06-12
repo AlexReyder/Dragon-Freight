@@ -1,0 +1,43 @@
+.Headings {
+	margin-bottom: 4rem;
+
+	@media only screen and (max-width: 56.25rem) {
+		// text-align: center;
+	}
+}
+
+.Heading {
+	font-size: var(--font-size-section-heading);
+	font-weight: 500;
+	color: #f2f2f2;
+	letter-spacing: 1px;
+	line-height: 1;
+	color: var(--color-text-black);
+	position: relative;
+	margin-bottom: 6rem;
+	text-align: left;
+}
+
+.Subheading {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--color-primary);
+	text-transform: uppercase;
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.Text {
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: var(--color-text-white);
+	margin-top: -2rem;
+}
+
+.Black {
+	color: var(--color-text-black);
+}
+
+.White {
+	color: var(--color-text-white);
+}
