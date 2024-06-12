@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "node server.js",
 		"build": "next build",
-		"start": "NODE_ENV=production node server.js",
+		"start": "next start",
 		"export": "next export",
 		"lint": "next lint"
 	},
@@ -15,7 +15,6 @@
 		"@mui/icons-material": "^5.15.18",
 		"@mui/material-nextjs": "^5.15.11",
 		"@mui/x-data-grid": "^7.5.0",
-		"@prisma/client": "^5.14.0",
 		"@studio-freight/lenis": "^1.0.42",
 		"axios": "^1.6.7",
 		"canvas": "^2.11.2",
@@ -54,7 +53,6 @@
 		"babel-plugin-inline-react-svg": "^2.0.2",
 		"eslint": "^8.56.0",
 		"eslint-config-next": "^14.1.0",
-		"prisma": "^5.14.0",
 		"typescript": "^5"
 	}
 }
