@@ -14,7 +14,7 @@ export const AboutSection = () => {
 	// const words = phrase.split(' ')
 
 	return (
-		<Section id='product-text' className={cls.Section}>
+		<Section id='about' className={cls.Section}>
 			<Container className={cls.Container}>
 				<h3 className={cls.Subheading}>О компании</h3>
 				<Character paragraph={phrase} />

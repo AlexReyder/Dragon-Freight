@@ -29,6 +29,7 @@
 	cursor: pointer;
 	border-radius: 25px;
 	overflow: hidden;
+	z-index: 7;
 	border: 3px solid var(--color-primary);
 
 	.slider {
@@ -107,6 +108,7 @@
 	border-radius: 25px;
 
 	position: absolute;
+	z-index: 5;
 }
 
 .header {
@@ -143,9 +145,9 @@
 		a {
 			text-decoration: none;
 
-			color: black;
+			color: #fff;
 
-			font-size: 46px;
+			font-size: 3.2rem;
 		}
 	}
 }

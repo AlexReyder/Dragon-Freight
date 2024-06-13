@@ -8,7 +8,7 @@ const menu = {
 	open: {
 		width: '480px',
 
-		height: '650px',
+		height: '400px',
 
 		top: '-25px',
 

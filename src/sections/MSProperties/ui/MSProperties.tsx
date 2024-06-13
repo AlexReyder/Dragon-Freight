@@ -10,7 +10,7 @@ import cls from './MSProperties.module.scss'
 
 export const MSProperties = () => {
 	return (
-		<Section id='properties' className={cls.Section}>
+		<Section id='advantages' className={cls.Section}>
 			<Headings
 				title={
 					<span>

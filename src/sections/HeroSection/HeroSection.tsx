@@ -17,7 +17,8 @@ export const HeroSection = () => {
 		<Section id='#hero' className={cls.Hero}>
 			<div className={cls.Touch}>
 				<h1 className={cls.Heading}>
-					Ваш партнер <br />в мир доставки грузов из Китая
+					Ваш партнер <br />в мир доставки
+					<br /> грузов из Китая
 					{/* Ваш надежный партнер в мире логистики. Доставка грузов из Китая */}
 				</h1>
 				<h2 className={cls.Subheading}>

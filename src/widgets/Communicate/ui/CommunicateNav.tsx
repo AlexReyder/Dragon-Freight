@@ -4,21 +4,26 @@ import { perspective } from './anim'
 
 const links = [
 	{
-		title: '',
+		title: '+7(903) 500-66-51',
 
-		href: '/',
+		href: 'tel:+79035006651',
 	},
 
 	{
-		title: '',
+		title: 'info@dragonfreight.ru',
 
-		href: '/',
+		href: 'mailto:info@dragonfreight.ru',
 	},
 
 	{
-		title: '',
+		title: 'WhatsApp',
 
-		href: '/',
+		href: 'https://wa.me/79035006651?text=',
+	},
+	{
+		title: 'Telegram',
+
+		href: 'https://t.me/dragonfreight',
 	},
 ]
 
@@ -32,14 +37,13 @@ export const CommunicateNav = () => {
 					return (
 						<div key={`b_${i}`} className={cls.linkContainer}>
 							<motion.div
-								href={href}
 								custom={i}
 								variants={perspective}
 								initial='initial'
 								animate='enter'
 								exit='exit'
 							>
-								<a>{title}</a>
+								<a href={href}>{title}</a>
 							</motion.div>
 						</div>
 					)

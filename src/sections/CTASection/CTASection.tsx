@@ -14,7 +14,7 @@ import cls from './CTASection.module.scss'
 interface CustomProjectProps {
 	className?: string
 	subtitle: strimg
-	title: string
+	title: any
 	text: string
 	bg: string
 }

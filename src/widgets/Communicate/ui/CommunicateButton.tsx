@@ -40,7 +40,7 @@ export const CommunicateButton = ({
 						toggleMenu()
 					}}
 				>
-					<PerspectiveText label='Close' />
+					<PerspectiveText label='Закрыть' />
 				</div>
 			</motion.div>
 		</div>

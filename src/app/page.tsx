@@ -14,7 +14,13 @@ export default function Home() {
 			<HeroSection />
 			<ServicesSection />
 			<CTASection
-				title='Быстрый расчет стоимости доставки'
+				title={
+					<span>
+						Быстрый расчет
+						<br />
+						стоимости доставки
+					</span>
+				}
 				subtitle='Оставить заявку'
 				text='Оставьте номер телефона. Наш менеджер перезвонит и подробно ответит на Ваши вопросы.'
 				bg='/img/cta/1.jpg'
