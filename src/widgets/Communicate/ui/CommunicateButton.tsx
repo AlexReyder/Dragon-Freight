@@ -1,3 +1,5 @@
+import { TelegramIcon } from '@/shared/ui/Icons/TelegramIcon/TelegramIcon'
+import { WhatsAppIcon } from '@/shared/ui/Icons/WhatsAppIcon/WhatsAppIcon'
 import { motion } from 'framer-motion'
 import cls from './HeaderCommunicate.module.scss'
 
@@ -26,6 +28,10 @@ export const CommunicateButton = ({
 					}}
 				>
 					<PerspectiveText label='+79035006651' />
+					<div className={cls.Icons}>
+						<WhatsAppIcon className={cls.Icon} />
+						<TelegramIcon className={cls.Icon} />
+					</div>
 				</div>
 
 				<div

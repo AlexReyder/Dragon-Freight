@@ -1,91 +1,56 @@
 .cardContainer {
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: sticky;
-	top: 0px;
+	&:not(:last-child) {
+		margin-bottom: 10rem;
+	}
 }
 
 .card {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	top: -25%;
-	height: 640px;
+	height: 100%;
 	width: 100%;
 	margin: 0 auto;
 	border-radius: 30px;
-	transform-origin: top;
+	box-shadow: 0 5px 20px rgba(31, 47, 70, 0.12);
+	padding: 2rem;
 }
 
 .body {
 	display: flex;
+	// align-items: center;
 	width: 100%;
 	height: 100%;
 	// margin-top: 50px;
 	gap: 50px;
-	background-color: #222;
+	background-color: #fff;
 	border-radius: 30px;
 	// padding: 50px;
 }
 
 .description {
-	padding-left: 2rem;
-	width: 60%;
+	width: 50%;
 	position: relative;
-	top: 2rem;
 	z-index: 3;
-
-	// &::after {
-	// 	content: '';
-	// 	display: inline-block;
-	// 	position: absolute;
-	// 	top: -2rem;
-	// 	right: -12.8rem;
-	// 	width: 8rem;
-	// 	height: 100%;
-	// 	background: linear-gradient(
-	// 		to bottom right,
-	// 		#222 51%,
-	// 		#222 50%,
-	// 		transparent 52%,
-	// 		transparent 100%
-	// 	);
-	// 	z-index: 2;
-	// 	@media only screen and (max-width: 56.25rem) {
-	// 		background: linear-gradient(
-	// 			to bottom right,
-	// 			#222 50%,
-	// 			#222 49%,
-	// 			transparent 50%,
-	// 			transparent 100%
-	// 		);
-	// 		height: 15rem;
-	// 		top: 100%;
-	// 		right: 0;
-	// 		width: 100%;
-	// 	}
-	// }
 }
 
 .imageContainer {
-	// position: relative;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	width: 100%;
+	position: relative;
+	width: 50%;
 	height: 100%;
-	// border-end-end-radius: 30px;
-	// border-top-right-radius: 30px;
 	border-radius: 30px;
 	overflow: hidden;
-	.inner {
-		width: 100%;
-		height: 100%;
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	img {
+		width: 100%;
+		height: auto;
 		object-fit: cover;
 	}
 }
@@ -94,8 +59,9 @@
 	font-size: 4.2rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: #fff;
+	color: #222;
 	margin-bottom: 1rem;
+	line-height: 1.25;
 	width: 100%;
 	position: relative;
 	// &::after {
@@ -113,7 +79,7 @@
 .Text {
 	font-size: 1.6rem;
 	font-weight: 400;
-	color: #fff;
+	color: #222;
 	position: relative;
 	margin-bottom: 2rem;
 	// &::after {
@@ -127,47 +93,6 @@
 	// 	z-index: 3;
 	// }
 }
-.NumberItem {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	border-bottom: 1px solid #fff;
-	padding: 1rem 0;
-	&:first-child {
-		border-top: 1px solid #fff;
-	}
-	// padding: 2rem 0;
-	// position: relative;
-	// &::after {
-	// 	content: '';
-	// 	width: calc(100% + 8rem);
-	// 	height: 2px;
-	// 	background-color: var(--color-border-dark);
-	// 	position: absolute;
-	// 	bottom: -1rem;
-	// 	left: 0;
-	// 	z-index: 3;
-	// }
-}
-
-.Number {
-	font-size: 6.4rem;
-	font-weight: 700;
-	line-height: 1;
-	color: #fff;
-}
-
-.NumberMeasure {
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	color: #fff;
-	margin-left: 1rem;
-}
-
-.NumberDescription {
-	font-size: 1.6rem;
-	color: #fff;
-}
 
 .ActionWrapper {
 	display: flex;
@@ -176,22 +101,52 @@
 	margin-top: 2rem;
 }
 
-.LinkMore {
-	background-color: #fff;
-	color: #222;
-	font-size: 1.8rem;
-	font-weight: 500;
-	padding: 1.5rem 3rem;
-	min-width: 280px;
-	border-radius: 17px;
-}
-.LinkTelegram {
-	background-color: var(--color-primary);
+.TelegramLink {
+	background-color: var(--color-secondary);
 	color: #fff;
-	font-size: 1.8rem;
+	display: inline-flex;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	font-size: 1.6rem;
 	font-weight: 500;
-	padding: 1.5rem 3rem;
-	min-width: 100%;
-	border-radius: 17px;
-	// margin-top: 1rem;
+	min-width: 280px;
+	height: 55px;
+	padding: 3rem 4rem;
+	border-radius: 10rem;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	padding-right: 8rem;
+	transition: transform 0.3s ease-out;
+	animation: moveInBottom 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	}
+}
+
+.Advantages {
+	margin: 4rem 0;
+}
+
+.Advantage {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.AdvantageIcon {
+	width: 32px;
+	height: 32px;
+}
+
+.AdvantageText {
+	font-size: 1.6rem;
+	font-weight: 500;
 }

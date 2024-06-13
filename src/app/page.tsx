@@ -19,25 +19,17 @@ export default function Home() {
 				text='Оставьте номер телефона. Наш менеджер перезвонит и подробно ответит на Ваши вопросы.'
 				bg='/img/cta/1.jpg'
 			/>
-			{/* 
-		
-			<UsageSection />
-			<AdvantagesSection />
-			<ConstructorSection /> */}
+			<TelegramSection />
 			<PrinciplesSection />
 			<AboutSection />
 			<MSProperties />
-			{/* <QuizSection /> */}
-			{/* <GallerySection />
-			<ReasonSection />
-			<CTASection /> */}
+
 			<CTASection
 				title='Быстрый расчет стоимости доставки'
 				subtitle='Оставить заявку'
 				text='Оставьте номер телефона. Наш специалист перезвонит и подробно ответит на Ваши вопросы.'
 				bg='/img/cta/1.jpg'
 			/>
-			<TelegramSection />
 			<Footer />
 		</main>
 	)

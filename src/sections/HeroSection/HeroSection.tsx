@@ -3,6 +3,8 @@ import { ConsultationModal } from '@/features/ConsultationModal'
 
 import { PrimaryButton } from '@/shared/ui/Buttons/PrimaryButton'
 import { Section } from '@/shared/ui/Layout/Section/Section'
+import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 import cls from './HeroSection.module.scss'
 
@@ -15,31 +17,30 @@ export const HeroSection = () => {
 		<Section id='#hero' className={cls.Hero}>
 			<div className={cls.Touch}>
 				<h1 className={cls.Heading}>
-					Ваш путеводитель <br />в мир доставки грузов из Китая
+					Ваш партнер <br />в мир доставки грузов из Китая
+					{/* Ваш надежный партнер в мире логистики. Доставка грузов из Китая */}
 				</h1>
 				<h2 className={cls.Subheading}>
-					Надежно транспортируем любые виды грузов для вашего бизнеса небом,
-					морем и по суше.
+					Мы осуществляем надёжные воздушные, морские и сухопутные
+					грузоперевозки для вашего бизнеса.
 				</h2>
 				<div className={cls.ButtonContainer}>
 					<PrimaryButton
 						className={cls.PrimaryButton}
-						text='Получить консультацию'
+						text='Получить быстрый расчет'
 						onClick={() => setModalConsultOpen(true)}
 					/>
+					<Link
+						href='https://t.me/dragonfreight'
+						target='_blank'
+						className={cls.TelegramLink}
+					>
+						Актуальные ставки в телеграмме &nbsp;&nbsp; &rarr;
+					</Link>
 				</div>
-				<video
-					itemScope
-					itemType='http://schema.org/VideoObject'
-					className={cls.Video}
-					autoPlay
-				>
-					<source src='/videos/hero.mp4' type='video/mp4' />
-					<meta itemProp='name' content='Name of the video' />
-					<meta itemProp='description' content='Description of the video...' />
-					<meta itemProp='duration' content='PT1M33S' />
-					<meta itemProp='thumbnail' content='my-video-thumbnail-path.jpg' />
-				</video>
+			</div>
+			<div className={cls.ImageContainer}>
+				<Image src='/img/hero/china-map.svg' alt='' fill />
 			</div>
 			<ConsultationModal
 				isOpen={isModalConsultOpen}

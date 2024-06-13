@@ -14,7 +14,7 @@ export const Headings = ({
 	title,
 	subtitle,
 	text = '',
-	color = 'w',
+	color = 'b',
 }: HeadingsProps) => {
 	return (
 		<div className={classNames(cls.Headings, {}, [className!])}>

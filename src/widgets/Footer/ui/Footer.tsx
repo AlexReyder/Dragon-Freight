@@ -1,5 +1,4 @@
 import { Container } from '@/shared/ui/Layout/Container/Container'
-import Link from 'next/link'
 import cls from './Footer.module.scss'
 
 export const Footer = () => {
@@ -43,7 +42,7 @@ export const Footer = () => {
 				<div className={cls.Office}>
 					<div className={`${cls.Contacts__entity} ${cls.Entity_4}`}>
 						<p className={cls.Title}>Офис в Москве</p>
-						<p className={`${cls.Address}`}>ул. Москворечье, д. 49, кв. 12</p>
+						<p className={`${cls.Address}`}>ул. Москворечье, д. 49</p>
 					</div>
 				</div>
 				<div className={cls.Requisites}>
@@ -55,14 +54,6 @@ export const Footer = () => {
 				</div>
 			</Container>
 			<p className={cls.Copyright}>2024 © ООО «ДРЭГОН ФРАЙТ»</p>
-			<Link href='#' className={cls.Top}>
-				<img
-					src='img/icons/top.svg'
-					alt='Подняться наверх'
-					width={19}
-					height={28}
-				/>
-			</Link>
 		</footer>
 	)
 }

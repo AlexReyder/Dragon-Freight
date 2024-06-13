@@ -114,9 +114,9 @@ export const AboutSection = () => {
 					</div>
 					<div className={cls.PartnersWrapper}>
 						<Image
-							src='/img/partners/8.png'
+							src='/img/partners/8.jpg'
 							alt='Наш партнер'
-							width={88}
+							width={188}
 							height={60}
 							className={cls.Partners}
 						/>

@@ -1,5 +1,4 @@
 import classNames from '@/shared/lib/classNames/classNames'
-import { ArrowPrimaryBtnIcon } from '@/shared/ui/Icons/ArrowPrimaryBtnIcon/ArrowBackIcon'
 import { ReactNode } from 'react'
 import cls from './PrimaryButton.module.scss'
 
@@ -28,9 +27,9 @@ export const PrimaryButton = ({
 			onClick={onClick}
 		>
 			<span>{text}</span>
-			<div className={cls.IconContainer}>
+			{/* <div className={cls.IconContainer}>
 				<ArrowPrimaryBtnIcon />
-			</div>
+			</div> */}
 		</button>
 	)
 }

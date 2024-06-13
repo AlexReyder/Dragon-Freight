@@ -1,7 +1,7 @@
 .Hero {
 	background-color: var(--color-bg);
-	max-width: 100vw;
-	min-height: calc(100vh - 90px);
+	width: 100%;
+	height: calc(100vh - 90px);
 	display: flex;
 	align-items: center;
 	padding-bottom: 4.8rem;
@@ -14,26 +14,32 @@
 }
 
 .Touch {
-	width: 100%;
+	width: 50%;
 	height: 100%;
-	padding: 0 7rem;
+	padding-left: 7rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: center;
 	position: relative;
-	margin-top: 15%;
+	// margin-top: 15%;
 	overflow: hidden;
+}
+
+.ImageContainer {
+	width: 50%;
+	height: 100%;
+	position: relative;
 }
 
 .Heading {
 	font-size: 5.6rem;
-	font-weight: 400;
+	font-weight: 700;
 	color: var(--color-black);
 	// letter-spacing: 0.5px;
-	line-height: 1.25;
+	line-height: 1.15;
 	text-align: left;
-	margin-bottom: 2rem;
+	margin-bottom: 2.5rem;
 	position: relative;
 	@media only screen and (max-width: 37.5rem) {
 		font-size: 4.2rem;
@@ -48,22 +54,56 @@
 .Subheading {
 	width: 100%;
 	font-size: 2rem;
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--color-black);
 	text-align: left;
 }
 
 .ButtonContainer {
-	width: 100%;
-	// display: flex;
+	// width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2rem;
 	// justify-content: center;
-	margin-top: 3rem;
+	margin-top: 4rem;
 	margin-bottom: 4rem;
 }
 
-.Video {
-	width: 100%;
-	object-fit: cover;
-	height: 600px;
-	border-radius: 24px;
+.TelegramLink {
+	background-color: var(--color-secondary);
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	min-width: 280px;
+	height: 55px;
+	padding: 3rem 4rem;
+	border-radius: 10rem;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	padding-right: 8rem;
+	transition: transform 0.3s ease-out;
+	animation: moveInBottom 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	}
+}
+
+@keyframes moveInBotton {
+	0% {
+		opacity: 0;
+		transform: translateY(3rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
 }

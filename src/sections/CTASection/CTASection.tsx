@@ -65,28 +65,25 @@ export const CTASection = ({
 		<Section className={cls.CTA}>
 			<Container className={cls.Container}>
 				<div className={cls.Wrapper}>
-					<div className={cls.Left}>
-						<Headings
-							title={title}
-							subtitle={subtitle}
-							text={text}
-							className={cls.Heading}
-						/>
-					</div>
-					<div
-						className={cls.Right}
-						style={{
-							backgroundImage: `
-                            linear-gradient(to right, rgba(0, 0, 0, 0.25) 35%, rgba(0, 0, 0, 0.25) 100%),
-                            url(${bg})`,
-						}}
-					>
-						<form onSubmit={handleSubmit(onSubmit)} className={cls.Right}>
+					<Headings
+						title={title}
+						subtitle={subtitle}
+						text={text}
+						color='b'
+						className={cls.Heading}
+					/>
+					<div className={cls.FormWrapper}>
+						<form onSubmit={handleSubmit(onSubmit)} className={cls.Form}>
 							<Controller
 								name='username'
 								control={control}
 								render={({ field }) => (
-									<ModalInput placeholder='Ваше имя' required {...field} />
+									<ModalInput
+										placeholder='Ваше имя'
+										required
+										{...field}
+										className={cls.ModalInput}
+									/>
 								)}
 							/>
 							<Controller
@@ -117,6 +114,9 @@ export const CTASection = ({
 							/>
 						</form>
 					</div>
+				</div>
+				<div>
+					<img src='/img/cta/cta.svg' alt='' />
 				</div>
 			</Container>
 		</Section>
