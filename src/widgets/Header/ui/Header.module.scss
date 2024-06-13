@@ -97,9 +97,6 @@
 }
 
 .Hamburger {
-	display: none;
-	@media only screen and (max-width: 90rem) {
-		display: block;
-		margin-left: 3rem;
-	}
+	display: block;
+	margin-left: 3rem;
 }
