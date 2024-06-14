@@ -8,7 +8,7 @@ import cls from './ServicesSection.module.scss'
 export const ServicesSection = () => {
 	return (
 		<Section id='services'>
-			<Container>
+			<Container className={cls.Container}>
 				<Headings
 					title={
 						<span>

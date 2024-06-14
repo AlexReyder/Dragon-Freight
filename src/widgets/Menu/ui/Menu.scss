@@ -18,6 +18,9 @@
 	font-weight: 500;
 	color: var(--color-black);
 	text-transform: uppercase;
+	@media only screen and (max-width: 25rem) {
+		display: none;
+	}
 }
 
 .menu-icon {

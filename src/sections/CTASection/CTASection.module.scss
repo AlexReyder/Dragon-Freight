@@ -3,14 +3,19 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-
-	@media only screen and (max-width: 25rem) {
-		padding: 4.8rem 0;
+	@media only screen and (max-width: 37.5rem) {
+		flex-direction: column;
+		gap: 6rem;
 	}
+
+	// @media only screen and (max-width: 25rem) {
+	// 	padding: 4.8rem 0;
+	// }
 }
 
 .Wrapper {
-	width: 100%;
+	width: 50%;
+	height: 100%;
 	position: relative;
 	z-index: 5;
 	background-size: cover;
@@ -24,16 +29,41 @@
 		flex-direction: column;
 		height: 100%;
 	}
+	@media only screen and (max-width: 37.5rem) {
+		width: 100%;
+		gap: 2rem;
+	}
+}
+
+.FormWrapper {
+	// width: 50%;
+	// height: 100%;
 }
 
 .Form {
-	width: 80%;
+	// width: 50%;
 	height: 100%;
 	@media only screen and (min-width: 89rem) {
 		width: 60%;
 	}
+	@media only screen and (max-width: 37.5rem) {
+		text-align: center;
+	}
 	// padding: 4rem;
 	// box-shadow: 0 5px 20px rgba(31, 47, 70, 0.12);
+}
+
+.ImageContainer {
+	width: 50%;
+	height: 100%;
+	@media only screen and (max-width: 37.5rem) {
+		width: 90%;
+	}
+}
+
+.Image {
+	width: 100%;
+	height: auto;
 }
 
 .PhoneContainer {
@@ -65,5 +95,15 @@
 	&:focus {
 		border-color: var(--color-primary);
 		outline: none;
+	}
+}
+
+.Heading {
+	@media only screen and (max-width: 37.5rem) {
+		&,
+		& > h2,
+		& > h3 {
+			text-align: center;
+		}
 	}
 }

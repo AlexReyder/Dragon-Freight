@@ -115,8 +115,12 @@ export const CTASection = ({
 						</form>
 					</div>
 				</div>
-				<div>
-					<img src='/img/cta/cta.svg' alt='' />
+				<div className={cls.ImageContainer}>
+					<img
+						src='/img/cta/cta.svg'
+						alt='Получить быстрый расчет'
+						className={cls.Image}
+					/>
 				</div>
 			</Container>
 		</Section>

@@ -1,8 +1,10 @@
 'use client'
 import { PrimaryButton } from '@/shared/ui/Buttons/PrimaryButton'
 
+import { ConsultationModal } from '@/features/ConsultationModal'
 import { OkIcon } from '@/shared/ui/Icons/OkIcon/OkIcon'
 import Link from 'next/link'
+import { useState } from 'react'
 import cls from './Service.module.scss'
 
 interface ServiceProps {
@@ -18,6 +20,10 @@ export const Service = ({
 	src,
 	advantages,
 }: ServiceProps) => {
+	const [isModalConsultOpen, setModalConsultOpen] = useState(false)
+	const handleModalClose = () => {
+		setModalConsultOpen(false)
+	}
 	return (
 		<div className={cls.cardContainer}>
 			<div className={cls.card}>
@@ -42,7 +48,10 @@ export const Service = ({
 						</ul>
 
 						<div className={cls.ActionWrapper}>
-							<PrimaryButton text='Получить консультацию' />
+							<PrimaryButton
+								text='Получить консультацию'
+								onClick={() => setModalConsultOpen(true)}
+							/>
 							<Link
 								href='https://t.me/dragonfreight'
 								target='_blank'
@@ -58,6 +67,10 @@ export const Service = ({
 					</div>
 				</div>
 			</div>
+			<ConsultationModal
+				isOpen={isModalConsultOpen}
+				handleClose={handleModalClose}
+			/>
 		</div>
 	)
 }

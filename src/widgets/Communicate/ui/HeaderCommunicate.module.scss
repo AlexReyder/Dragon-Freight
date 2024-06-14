@@ -113,7 +113,9 @@
 
 .header {
 	position: relative;
-	// position: fixed;
+	@media only screen and (max-width: 52.5rem) {
+		display: none;
+	}
 }
 
 .nav {

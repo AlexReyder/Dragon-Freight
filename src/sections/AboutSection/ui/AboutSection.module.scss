@@ -71,6 +71,12 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	margin-bottom: 12rem;
+	@media only screen and (max-width: 43.75rem) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media only screen and (max-width: 21.875rem) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 .FactsItem {
@@ -87,6 +93,20 @@
 	}
 	&:last-child {
 		border-right: none;
+	}
+	@media only screen and (max-width: 43.75rem) {
+		&:nth-child(3) {
+			border-right: 1px solid var(--color-border-white);
+		}
+		&:nth-child(2) {
+			border-right: none;
+		}
+		&:nth-child(4) {
+			border-right: none;
+		}
+	}
+	@media only screen and (max-width: 21.875rem) {
+		border-right: none !important;
 	}
 }
 

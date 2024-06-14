@@ -41,12 +41,15 @@
 }
 
 .Controls {
-	display: flex;
 	align-items: center;
 	justify-content: end;
-	gap: 1rem;
-	margin-top: 2rem;
+	gap: 4rem;
+	margin-top: 4rem;
 	margin-bottom: 4rem;
+	display: none;
+	@media only screen and (max-width: 56.25rem) {
+		display: flex;
+	}
 
 	@media only screen and (max-width: 37.5rem) {
 		justify-content: space-between;
@@ -56,13 +59,13 @@
 
 .PrevSlideArrow,
 .NextSlideArrow {
+	background-color: var(--color-secondary);
 	display: flex;
 	align-items: center;
 	gap: 10px;
 	border: none;
-	background-color: var(--color-primary);
 	padding: 1rem;
-	border-radius: 50%;
+	border-radius: 7px;
 	cursor: pointer;
 }
 

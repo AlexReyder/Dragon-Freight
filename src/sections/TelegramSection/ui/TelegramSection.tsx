@@ -20,7 +20,7 @@ export const TelegramSection = () => {
 						Подписывайтесь на наш телеграм-канал и будьте в курсе всех
 						актуальных цен на наши услуги!
 					</h3>
-					<div style={{ display: 'flex' }}>
+					<div className={cls.ActionWrapper}>
 						<Link
 							href='https://t.me/dragonfreight'
 							target='_blank'

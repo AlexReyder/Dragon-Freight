@@ -9,6 +9,7 @@
 	height: 100% !important;
 	transition: all 0.3s;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	&:not(:last-child) {
@@ -22,15 +23,24 @@
 			visibility: visible;
 		}
 	}
+	@media only screen and (max-width: 56.25rem) {
+		border-right: none !important;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 .Content {
 	padding: 0 1rem;
 	transition: all 0.3s;
 	opacity: 0;
-	visibility: 0;
+	visibility: hidden;
 	width: 100%;
 	// height: 100%;
 	background-color: transparent;
+	@media only screen and (max-width: 56.25rem) {
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 .Subheading {

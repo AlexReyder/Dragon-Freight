@@ -18,22 +18,13 @@
 	grid-template-columns: repeat(3, 1fr);
 	// grid-template-rows: repeat(3, 1fr);
 	gap: 0px 0px;
-	@media only screen and (max-width: 53.125rem) {
-		grid-template-columns: repeat(3, 1fr);
+	@media only screen and (max-width: 43.75rem) {
+		grid-template-columns: repeat(2, 1fr);
 		// grid-template-rows: repeat(3, 1fr);
 	}
 	@media only screen and (max-width: 37.5rem) {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		// grid-template-rows: ;
-		grid-template-areas:
-			'Item1 Item3'
-			'Item5 Item2'
-			'Item6 Item4'
-			'Item8 Item7'
-			'Item10 Item9'
-			'Item11 Item12'
-			'Item13 Item14'
-			'Item15 Item15';
 	}
 }
 

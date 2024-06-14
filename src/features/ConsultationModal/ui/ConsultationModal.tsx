@@ -2,7 +2,6 @@
 import { PrimaryButton } from '@/shared/ui/Buttons/PrimaryButton/ui/PrimaryButton'
 import { ModalInput } from '@/shared/ui/Inputs/ModalInput/ModalInput'
 import { Modal } from '@/shared/ui/Modal'
-import PolicyCheckbox from '@/shared/ui/PolicyCheckbox/PolicyCheckbox'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -87,13 +86,6 @@ export const ConsultationModal = ({
 							/>
 						)}
 					/>
-
-					<PolicyCheckbox change={handlePolicyChange} />
-					{!isPolicyErr ? null : (
-						<p style={{ fontSize: '14px', color: 'red' }}>
-							Подтвердите согласие на обработку персональных данных
-						</p>
-					)}
 					<PrimaryButton type='submit' text='Отправить заявку' />
 				</form>
 			</div>
@@ -104,12 +96,10 @@ export const ConsultationModal = ({
 export const ConsultaionHeading = () => {
 	return (
 		<>
-			<h3 className={cls.Modal_heading}>
-				Поможем с выбором и рассчитаем стоимость
-			</h3>
+			<h3 className={cls.Modal_heading}>Быстрый рассчет стоимости</h3>
 			<p className={cls.Modal_subheading}>
-				Оставьте свои данные и наш менеджер поможет подобрать подходящий вариант
-				под ваш запрос.
+				Оставьте номер телефона. Наш менеджер перезвонит и подробно ответит на
+				Ваши вопросы.
 			</p>
 		</>
 	)

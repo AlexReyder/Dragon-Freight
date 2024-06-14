@@ -30,12 +30,21 @@
 	background-color: #fff;
 	border-radius: 30px;
 	// padding: 50px;
+	@media only screen and (max-width: 56.25rem) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .description {
 	width: 50%;
 	position: relative;
 	z-index: 3;
+	@media only screen and (max-width: 56.25rem) {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .imageContainer {
@@ -47,6 +56,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media only screen and (max-width: 56.25rem) {
+		width: 90%;
+	}
 
 	img {
 		width: 100%;
@@ -64,16 +76,9 @@
 	line-height: 1.25;
 	width: 100%;
 	position: relative;
-	// &::after {
-	// 	content: '';
-	// 	width: calc(100% + 8rem);
-	// 	height: 2px;
-	// 	background-color: var(--color-border-dark);
-	// 	position: absolute;
-	// 	bottom: -1rem;
-	// 	left: 0;
-	// 	z-index: 3;
-	// }
+	@media only screen and (max-width: 20rem) {
+		font-size: 3.2rem;
+	}
 }
 
 .Text {
@@ -99,6 +104,9 @@
 	flex-wrap: wrap;
 	gap: 2rem;
 	margin-top: 2rem;
+	@media only screen and (max-width: 56.25rem) {
+		justify-content: center;
+	}
 }
 
 .TelegramLink {
@@ -118,7 +126,7 @@
 	cursor: pointer;
 	position: relative;
 	z-index: 1;
-	padding-right: 8rem;
+	// padding-right: 8rem;
 	transition: transform 0.3s ease-out;
 	animation: moveInBottom 0.5s ease-out 0.75s;
 	animation-fill-mode: backwards;
@@ -126,10 +134,20 @@
 		transform: translateY(-3px);
 		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 	}
+	@media only screen and (max-width: 56.25rem) {
+		padding: 2rem;
+	}
+	@media only screen and (max-width: 20rem) {
+		min-width: 236px;
+	}
 }
 
 .Advantages {
 	margin: 4rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .Advantage {
@@ -149,4 +167,6 @@
 .AdvantageText {
 	font-size: 1.6rem;
 	font-weight: 500;
+	width: calc(100% - 32px);
+	text-align: left;
 }
