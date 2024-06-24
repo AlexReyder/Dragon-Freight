@@ -87,7 +87,7 @@ export const Menu = ({ className }: MenuProps) => {
 							</Link>
 						</li>
 						<li className='nav__list-item'>
-							<Link href='/#contacts' onClick={onToggle}>
+							<Link href='/kontakti' onClick={onToggle}>
 								Контакты
 							</Link>
 						</li>

@@ -1,9 +1,9 @@
 import { Container } from '@/shared/ui/Layout/Container/Container'
 import cls from './Footer.module.scss'
 
-export const Footer = () => {
+export const Footer = ({ className = '' }) => {
 	return (
-		<footer className={cls.Footer} id='contacts'>
+		<footer className={`${cls.Footer} ${className}`} id='contacts'>
 			<Container className={cls.Wrapper}>
 				<div className={cls.Contact}>
 					<div className={`${cls.Contacts__entity} ${cls.Entity_1}`}>

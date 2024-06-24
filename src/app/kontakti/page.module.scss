@@ -1,0 +1,12 @@
+.Heading {
+	// margin-bottom: 0 !important;
+}
+.Container {
+	padding: 9.6rem 7rem 0 7rem;
+}
+
+.Footer {
+	& > div {
+		padding-top: 0;
+	}
+}
