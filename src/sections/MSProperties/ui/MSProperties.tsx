@@ -14,7 +14,8 @@ export const MSProperties = () => {
 			<Headings
 				title={
 					<span>
-						6 причин доверить свой <span className={cls.Colored}>груз</span> нам
+						Четко выполняем свои обязательства, поэтому с нами{' '}
+						<span className={cls.Colored}>выгодно работать</span>
 					</span>
 				}
 				subtitle='Преимущества'
@@ -28,27 +29,27 @@ export const MSProperties = () => {
 				/>
 				<Property
 					title='Полное сопровождение'
-					text='Мы берём на себя все заботы с транспортировкой грузов, освобождая вас от лишних хлопот и позволяя сосредоточиться на развитии Вашего бизнеса. '
+					text='Мы берём на себя все заботы по транспортировке грузов из Китая, включая оформление документов и решение сложных ситуаций. '
 					icon={<PathIcon className={cls.Icon} />}
 				/>
 				<Property
-					title='Быстрые ставки'
-					text='Возможность оперативно отвечать транспортным требованиям клиента в низкий или высокий сезон по разумной цене. '
+					title='Гарантия неизменности цены'
+					text='Все расходы прописываются в договоре и не меняются в ходе транспортировки. Непредвиденные расходы компенсируем за счет компании. '
 					icon={<HandsIcon className={cls.Icon} />}
 				/>
 				<Property
 					title='Скорость доставки'
-					text='Cокращаем сроки доставки вашего груза благодаря использованию проверенных маршрутов. '
+					text='Сокращаем сроки доставки вашего груза благодаря использованию оптимальных маршрутов и проверенных перевозчиков. '
 					icon={<TimeIcon className={cls.Icon} />}
 				/>
 				<Property
 					title='Сохранность груза'
-					text='Обеспечиваем надёжную упаковку и страхование грузов, чтобы Вы могли быть уверены в сохранности своих товаров во время перевозки. '
+					text='Обеспечиваем надежную упаковку и страхование грузов. Контролируем состояние груза на всех этапах доставки. '
 					icon={<GuaranteeIcon className={cls.Icon} />}
 				/>
 				<Property
-					title='Отлаженная работа'
-					text='Информируем своих клиентов исчерпывающей информацией по стоимости услуг, срокам выполнения задачи, оптимальному маршруту и транспорту. '
+					title='Клиентский сервис 24/7'
+					text='Всегда остаемся на связи, отвечаем на вопросы и держим в курсе всех ключевых этапов работы. '
 					icon={<WorkIcon className={cls.Icon} />}
 				/>
 			</ul>
@@ -57,16 +58,17 @@ export const MSProperties = () => {
 }
 
 interface Property {
+	className?: string
 	title: string
 	text: string
 	icon: any
 }
-const Property = ({ title, text, icon }: Property) => {
+export const Property = ({ title, text, icon, className = '' }: Property) => {
 	return (
 		<li className={cls.PropertyItem}>
 			{icon}
 			<p className={cls.PropertyTitle}>{title}</p>
-			<p className={cls.PropertyText}>{text}</p>
+			<p className={`${cls.PropertyText} ${className}`}>{text}</p>
 		</li>
 	)
 }

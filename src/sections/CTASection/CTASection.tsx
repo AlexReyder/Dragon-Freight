@@ -16,7 +16,6 @@ interface CustomProjectProps {
 	subtitle: strimg
 	title: any
 	text: string
-	bg: string
 }
 
 export const CTASection = ({
@@ -24,7 +23,6 @@ export const CTASection = ({
 	subtitle,
 	title,
 	text,
-	bg,
 }: CustomProjectProps) => {
 	const { control, register, handleSubmit } = useForm({
 		defaultValues: {

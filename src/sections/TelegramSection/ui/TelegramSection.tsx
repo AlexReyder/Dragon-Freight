@@ -17,8 +17,8 @@ export const TelegramSection = () => {
 						<span>канал</span>
 					</h2>
 					<h3 className={cls.Subheading}>
-						Подписывайтесь на наш телеграм-канал и будьте в курсе всех
-						актуальных цен на наши услуги!
+						Подпишитесь на наш telegram-канал и будьте в курсе обновления цен на
+						наши услуги. Ставки постоянно меняются.
 					</h3>
 					<div className={cls.ActionWrapper}>
 						<Link
@@ -26,7 +26,7 @@ export const TelegramSection = () => {
 							target='_blank'
 							className={cls.FollowButton}
 						>
-							<span>Подписаться </span>
+							<span>Подписаться на канал </span>
 							<span>&rarr;</span>
 						</Link>
 					</div>

@@ -2,15 +2,16 @@ export const servicesData = [
 	{
 		title: 'АУТСОРСИНГ ВЭД',
 		description:
-			'Мы ищем поставщиков в Китае, проверяем их надёжность, оплачиваем товары, проходим таможенные процедуры, объединяем грузы перед отправкой и организуем их доставку. ',
+			'Организуем бизнес с Китаем «под ключ». Мы ищем поставщиков в Китае, проверяем их надёжность, оплачиваем товары, проходим таможенные процедуры, объединяем грузы перед отправкой и организуем их доставку. ',
 		src: '/img/services/outsorsing.svg',
 		link: 'https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/',
 		color: '#BBACAF',
 		advantages: [
-			'Поиск, подбор поставщиков и товаров любой сложности',
-			'Отлаженная логистика и быстрая подготовка предложения',
-			'Фиксированная комиссия - 3%',
+			'Поиск поставщика или производителя',
+			'Организация закупки и доставки товара ',
+			'Подготовка всей документации',
 		],
+		serviceLink: '/services/autsorsing-ved',
 	},
 	{
 		title: 'АВИАДОСТАВКА',
@@ -20,10 +21,11 @@ export const servicesData = [
 		link: 'https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/',
 		color: '#C2491D',
 		advantages: [
-			'Срок доставки товара составляет от 3 до 7 дней.',
-			'Работаем с линиями CZ, MU, RF и 3U.',
-			'Прямой рейс.',
+			'Быстрая и надежная доставка',
+			'Срок 3-12 дней',
+			'Прямые и непрямые рейсы',
 		],
+		serviceLink: '/services/aviaperevozki-gruzov-iz-kitaya',
 	},
 	{
 		title: 'АВТОДОСТАВКА',
@@ -33,10 +35,11 @@ export const servicesData = [
 		link: 'https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/',
 		color: '#977F6D',
 		advantages: [
-			'Срок доставки товара составляет от 12 до 21 дня.',
-			'Мы можем забрать груз из любой точки Китая, где есть автомобильные дороги. Если дорог нет, мы закажем вездеход и всё равно заберём груз.',
-			'Мы сотрудничаем исключительно с владельцами транспортных средств.',
+			'Забор из любой точки Китая',
+			'Срок 12-21 день',
+			'Сборные или выделенные контейнеры',
 		],
+		serviceLink: '/services/avtoperevozki-gruzov-iz-kitaya',
 	},
 	{
 		title: 'Ж/Д ДОСТАВКА',
@@ -45,11 +48,8 @@ export const servicesData = [
 		src: '/img/services/locomotive-delivery.svg',
 		link: 'https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/',
 		color: '#B62429',
-		advantages: [
-			'Мы имеем своих представителей на крупных железнодорожных станциях Китая, поэтому можем обеспечить наилучший сервис.',
-			'Лояльная форма оплаты',
-			'Контроль груза на всем пути.',
-		],
+		advantages: ['Доступная цена', 'Срок 25-40 дней', 'Практически любой груз'],
+		serviceLink: '/services/zhd-perevozki-gruzov-iz-kitaya',
 	},
 	{
 		title: 'МОРСКАЯ ДОСТАВКА',
@@ -59,10 +59,11 @@ export const servicesData = [
 		link: 'https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/',
 		color: '#88A28D',
 		advantages: [
-			'Срок доставки товара составляет от 35 дней ',
-			'Мы можем отправиться из любого порта Китая в порты Владивостока, Новороссийска и Санкт-Петербурга, откуда груз будет доставлен по России железнодорожным и автомобильным транспортом.',
-			'Мы сотрудничаем с ведущими компаниями: «Трансконтейнер», Fesco, MSC и Reel Shipping.',
+			'Бюджетно и безопасно',
+			'Срок 35-60 дней',
+			'Практически любой груз',
 		],
+		serviceLink: '/services/morskaya-perevozka-gruzov-iz-kitaya',
 	},
 	{
 		title: 'ТАМОЖЕННОЕ ОФОРМЛЕНИЕ',
@@ -72,9 +73,10 @@ export const servicesData = [
 		link: 'https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/',
 		color: '#88A28D',
 		advantages: [
-			'Консультация по всем таможенным вопросам.',
-			'Организация таможенного оформления, проверка и контроль документов.',
-			'Оформление любой категории грузов.',
+			'Рассчитаем стоимость пошлин и сборов на выгодных условиях',
+			'Произведем оплату таможенных платежей ',
+			'Подготовим все необходимые закрывающие документы',
 		],
+		serviceLink: '/services/tamozhennoe-soprovozhdenie',
 	},
 ]

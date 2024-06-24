@@ -141,3 +141,46 @@ input[type='radio']:checked::before {
 .contactg {
 	padding-bottom: 0;
 }
+
+.ql-snow .ql-picker.ql-header .ql-picker-label::before {
+	content: 'Текст' !important;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item::before {
+	content: 'Текст' !important;
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value='3']::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value='3']::before {
+	content: 'Заголовок 3' !important;
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value='2']::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value='2']::before {
+	content: 'Заголовок 2' !important;
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value='1']::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value='1']::before {
+	content: 'Заголовок 1' !important;
+}
+
+.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+	content: 'Сохранить' !important;
+}
+
+.ql-snow .ql-tooltip[data-mode='link']::before {
+	content: 'Ссылка:' !important;
+}
+
+.ql-snow .ql-tooltip::before {
+	content: 'Ссылка:' !important;
+}
+
+.ql-snow .ql-tooltip a.ql-action::after {
+	content: 'Изменить' !important;
+}
+
+.ql-snow .ql-tooltip a.ql-remove::before {
+	content: 'Удалить' !important;
+}

@@ -1,0 +1,22 @@
+.Container {
+	display: flex;
+	gap: 2rem;
+}
+
+.Image {
+	position: relative;
+	width: 50%;
+}
+
+.Article {
+	width: 50%;
+}
+
+.Text {
+	font-size: 1.8rem;
+	font-weight: 500;
+	text-align: left;
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}

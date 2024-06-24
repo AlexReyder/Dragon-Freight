@@ -37,18 +37,53 @@ export const Menu = ({ className }: MenuProps) => {
 				<div className='nav__content'>
 					<ul className='nav__list'>
 						<li className='nav__list-item'>
-							<Link href='/#services' onClick={onToggle}>
-								Услуги
+							<Link href='/services/autsorsing-ved' onClick={onToggle}>
+								Аутсорсинг ВЭД
 							</Link>
 						</li>
 						<li className='nav__list-item'>
-							<Link href='/#about' onClick={onToggle}>
+							<Link
+								href='/services/aviaperevozki-gruzov-iz-kitaya'
+								onClick={onToggle}
+							>
+								Авиадоставка
+							</Link>
+						</li>
+						<li className='nav__list-item'>
+							<Link
+								href='/services/avtoperevozki-gruzov-iz-kitaya'
+								onClick={onToggle}
+							>
+								Автодоставка
+							</Link>
+						</li>
+						<li className='nav__list-item'>
+							<Link
+								href='/services/zhd-perevozki-gruzov-iz-kitaya'
+								onClick={onToggle}
+							>
+								Ж/Д Доставка
+							</Link>
+						</li>
+						<li className='nav__list-item'>
+							<Link
+								href='/services/morskaya-perevozka-gruzov-iz-kitaya'
+								onClick={onToggle}
+							>
+								Морская доставка
+							</Link>
+						</li>
+						<li className='nav__list-item'>
+							<Link
+								href='/services/tamozhennoe-soprovozhdenie'
+								onClick={onToggle}
+							>
+								Таможенное оформление
+							</Link>
+						</li>
+						<li className='nav__list-item'>
+							<Link href='/o-kompanii' onClick={onToggle}>
 								О компании
-							</Link>
-						</li>
-						<li className='nav__list-item'>
-							<Link href='/#advantages' onClick={onToggle}>
-								Преимущества
 							</Link>
 						</li>
 						<li className='nav__list-item'>

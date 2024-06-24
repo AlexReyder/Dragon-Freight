@@ -1,0 +1,36 @@
+.Container {
+	padding: 0 7rem 9.6rem 7rem;
+}
+
+.List {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.Item {
+	min-width: 280px;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	box-shadow: 0 5px 20px rgba(31, 47, 70, 0.12);
+	padding: 2rem 4rem;
+	border-radius: 7px;
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.Icon {
+	width: 32px;
+	height: 32px;
+}
+
+.Text {
+	font-size: 1.6rem;
+	font-weight: 500;
+	width: calc(100% - 32px);
+	text-align: left;
+}

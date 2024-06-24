@@ -10,12 +10,14 @@ import cls from './Service.module.scss'
 interface ServiceProps {
 	title: string
 	description: string
+	serviceLink: string
 	src: string
 	advantages: string[]
 }
 
 export const Service = ({
 	title,
+	serviceLink,
 	description,
 	src,
 	advantages,
@@ -48,10 +50,16 @@ export const Service = ({
 						</ul>
 
 						<div className={cls.ActionWrapper}>
-							<PrimaryButton
-								text='Получить консультацию'
-								onClick={() => setModalConsultOpen(true)}
-							/>
+							<div className={cls.ActionMain}>
+								<PrimaryButton
+									text='Получить консультацию'
+									onClick={() => setModalConsultOpen(true)}
+								/>
+								<Link href={serviceLink} className={cls.TelegramLink}>
+									Подробнее &nbsp;&nbsp; &rarr;
+								</Link>
+							</div>
+
 							<Link
 								href='https://t.me/dragonfreight'
 								target='_blank'

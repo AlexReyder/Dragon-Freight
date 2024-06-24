@@ -15,12 +15,10 @@ export const HeroSection = () => {
 	return (
 		<Section id='#hero' className={cls.Hero}>
 			<div className={cls.Touch}>
-				<h1 className={cls.Heading}>
-					Ваш партнер в мир доставки грузов из Китая
-				</h1>
+				<h1 className={cls.Heading}>Доставка грузов из Китая по всей России</h1>
 				<h2 className={cls.Subheading}>
-					Мы осуществляем надёжные воздушные, морские и сухопутные
-					грузоперевозки для вашего бизнеса.
+					Специализируемся на импорте товаров из любой точки Китая. Доставляем
+					автомобильным, железнодорожным, морским и авиатранспортом.
 				</h2>
 				<div className={cls.ButtonContainer}>
 					<PrimaryButton

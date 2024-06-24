@@ -1,8 +1,8 @@
 'use client'
-import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize'
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import LogoutIcon from '@mui/icons-material/Logout'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
-import QuizIcon from '@mui/icons-material/Quiz'
+import NewspaperIcon from '@mui/icons-material/Newspaper'
 import VpnKeyIcon from '@mui/icons-material/VpnKey'
 import { Box, IconButton, Typography } from '@mui/material'
 import { setCookie } from 'cookies-next'
@@ -111,7 +111,7 @@ const SidebarEl = () => {
 								ml='15px'
 							>
 								<Typography variant='h3' color={colors.grey[100]}>
-									Микроцемент
+									Dragon Freight
 								</Typography>
 								<IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
 									<MenuOutlinedIcon />
@@ -140,40 +140,23 @@ const SidebarEl = () => {
 						className='sidebar__items'
 					>
 						<Item
-							title='Стены'
-							to='/admin/walls'
-							icon={<DashboardCustomizeIcon />}
+							title='Ставки'
+							to='/admin/bet'
+							icon={<AttachMoneyIcon />}
 							selected={selected}
 							setSelected={setSelected}
 							ftg={handleCloseToggle}
 						/>
 
 						<Item
-							title='Полы'
-							to='/admin/floors'
-							icon={<DashboardCustomizeIcon />}
+							title='Новости'
+							to='/admin/news'
+							icon={<NewspaperIcon />}
 							selected={selected}
 							setSelected={setSelected}
 							ftg={handleCloseToggle}
 						/>
 
-						<Item
-							title='Мокрые зоны'
-							to='/admin/wet-areas'
-							icon={<DashboardCustomizeIcon />}
-							selected={selected}
-							setSelected={setSelected}
-							ftg={handleCloseToggle}
-						/>
-
-						<Item
-							title='Квиз'
-							to='/admin/quiz'
-							icon={<QuizIcon />}
-							selected={selected}
-							setSelected={setSelected}
-							ftg={handleCloseToggle}
-						/>
 						<Item
 							title='Профиль'
 							to='/admin/profile'

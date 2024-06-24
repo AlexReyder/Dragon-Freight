@@ -23,7 +23,6 @@ export default function Home() {
 				}
 				subtitle='Оставить заявку'
 				text='Оставьте номер телефона. Наш менеджер перезвонит и подробно ответит на Ваши вопросы.'
-				bg='/img/cta/1.jpg'
 			/>
 			<TelegramSection />
 			<PrinciplesSection />
@@ -34,7 +33,6 @@ export default function Home() {
 				title='Быстрый расчет стоимости доставки'
 				subtitle='Оставить заявку'
 				text='Оставьте номер телефона. Наш специалист перезвонит и подробно ответит на Ваши вопросы.'
-				bg='/img/cta/1.jpg'
 			/>
 			<Footer />
 		</main>

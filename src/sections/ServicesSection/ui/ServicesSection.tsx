@@ -12,9 +12,9 @@ export const ServicesSection = () => {
 				<Headings
 					title={
 						<span>
-							Оказываем весь комплекс услуг <br />
-							по транспортировке
-							<span className={cls.Colored}> грузов из Китая</span>
+							Оказываем весь{' '}
+							<span className={cls.Colored}>комплекс услуг </span> по
+							грузоперевозкам из Китая
 						</span>
 					}
 					subtitle='Услуги'

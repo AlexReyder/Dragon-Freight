@@ -1,0 +1,122 @@
+.StepContainer {
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+	box-shadow: 0 5px 20px rgba(31, 47, 70, 0.12);
+	padding: 2rem 4rem;
+	border-radius: 17px;
+	position: relative;
+	&:hover {
+		.StepDecorative {
+			color: var(--color-primary);
+		}
+	}
+	// width: 70%;
+}
+
+.StepList {
+	list-style: disc;
+	margin-top: 1.5rem;
+	margin-left: 3rem;
+}
+.StepListNum {
+	list-style: square;
+	margin-top: 1.5rem;
+	margin-left: 3rem;
+}
+
+.StepListNumbers {
+	list-style: decimal;
+	margin-top: 1.5rem;
+	margin-left: 3rem;
+}
+
+.StepItemNumbers {
+	font-size: 1.6rem;
+	font-weight: 400;
+	&::marker {
+		color: var(--color-primary);
+		// font-size: 24px;
+	}
+}
+
+.StepItem {
+	font-size: 1.6rem;
+	font-weight: 400;
+	&::marker {
+		color: var(--color-primary);
+		font-size: 24px;
+	}
+}
+
+.StepItemNum {
+	font-size: 1.6rem;
+	font-weight: 400;
+	&::marker {
+		color: var(--color-primary);
+		font-size: 24px;
+	}
+}
+
+.StepListGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-bottom: 1px solid var(--color-border-white);
+	border-left: 1px solid var(--color-border-white);
+}
+
+.StepSubheading {
+	margin-top: 1rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.StepDecorative {
+	position: absolute;
+	top: 0;
+	right: 2rem;
+	font-size: 6.4rem;
+	font-weight: 800;
+	color: #ffdbdb;
+	transition: all 0.3s;
+}
+
+.StepArticle {
+	font-size: 1.8rem;
+	margin-bottom: 4rem;
+}
+
+.StepWrapper {
+	display: flex;
+	align-items: baseline;
+	gap: 2rem;
+	justify-content: flex-start;
+	@media only screen and (max-width: 37.5rem) {
+		flex-direction: column;
+	}
+}
+
+.StepVariant {
+	color: var(--neutrals4);
+	margin-bottom: 1.5rem;
+}
+
+.Icon {
+	width: 32px;
+	height: 32px;
+	fill: var(--color-primary);
+}
+
+.AdvantageText {
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.TextIcon {
+	font-size: 2.4rem;
+	font-weight: 800;
+	color: var(--color-primary);
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+}
