@@ -9,7 +9,7 @@ import cls from './PostSection.module.scss'
 async function getData() {
 	'use server'
 
-	const res = await axios(`${process.env}//api/news/get`, {
+	const res = await axios(`${process.env.DOMAIN}//api/news/get`, {
 		headers: {
 			'Cache-Control': 'no-cache',
 			Pragma: 'no-cache',
