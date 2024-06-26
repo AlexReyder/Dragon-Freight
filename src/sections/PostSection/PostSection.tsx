@@ -25,6 +25,7 @@ async function getData() {
 
 export const PostSection = async () => {
 	let data = await getData()
+	console.log(data)
 	console.log(Array.isArray(data) && data.length > 0)
 	const sliderConfig = {
 		slidesPerView: 3,
