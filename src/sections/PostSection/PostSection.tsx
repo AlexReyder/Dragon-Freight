@@ -9,7 +9,7 @@ import cls from './PostSection.module.scss'
 async function getData() {
 	'use server'
 
-	const res = await axios(`https://dragonfreight.ru/api/news/get`, {
+	const res = await axios(`/api/news/get`, {
 		headers: {
 			'Cache-Control': 'no-cache',
 			Pragma: 'no-cache',
