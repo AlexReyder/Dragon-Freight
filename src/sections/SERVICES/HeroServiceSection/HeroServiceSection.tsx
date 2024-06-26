@@ -46,6 +46,7 @@ export const HeroServiceSection = ({
 				<img src={img} alt='' />
 			</div>
 			<ConsultationModal
+				theme={title}
 				isOpen={isModalConsultOpen}
 				handleClose={handleModalClose}
 			/>

@@ -5,7 +5,12 @@ import { HeroServiceSection } from '@/sections/SERVICES/HeroServiceSection/HeroS
 import { StepServiceSectionSection } from '@/sections/SERVICES/StepServiceSection/StepServiceSection'
 import { Footer } from '@/widgets/Footer'
 import { Header } from '@/widgets/Header'
+import { Metadata } from 'next'
 import cls from './page.module.scss'
+
+export const metadata: Metadata = {
+	title: 'Таможенное сопровождение',
+}
 
 export default function TMService() {
 	return (
@@ -126,6 +131,7 @@ export default function TMService() {
 			</StepServiceSectionSection>
 
 			<CTASection
+				theme='Таможенное сопровождение'
 				title='Нужна помощь с таможенным оформлением?'
 				subtitle='Оставить заявку'
 				text='Оставьте заявку и мы проконсультируем бесплатно. Рассчитаем предварительную стоимость услуги и сформируем индивидуальное предложение.'

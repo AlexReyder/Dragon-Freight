@@ -27,7 +27,7 @@ export const CommunicateButton = ({
 						toggleMenu()
 					}}
 				>
-					<PerspectiveText label='+79035006651' />
+					<PerspectiveText label='+7(993) 590-66-51' />
 					<div className={cls.Icons}>
 						<WhatsAppIcon className={cls.Icon} />
 						<TelegramIcon className={cls.Icon} />

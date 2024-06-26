@@ -6,7 +6,12 @@ import { HeroServiceSection } from '@/sections/SERVICES/HeroServiceSection/HeroS
 import { StepServiceSectionSection } from '@/sections/SERVICES/StepServiceSection/StepServiceSection'
 import { Footer } from '@/widgets/Footer'
 import { Header } from '@/widgets/Header'
+import { Metadata } from 'next'
 import cls from './page.module.scss'
+
+export const metadata: Metadata = {
+	title: 'Аутсорсинг ВЭД',
+}
 
 export default function VEDService() {
 	return (
@@ -153,6 +158,7 @@ export default function VEDService() {
 			</StepServiceSectionSection>
 
 			<CTASection
+				theme='Аутсорсинг ВЭД'
 				title='Доверьте доставку груза из Китая профессионалам'
 				subtitle='Оставить заявку'
 				text='Оставьте номер телефона. Наш сотрудник подробно ответит на все ваши вопросы и рассчитает стоимость.'

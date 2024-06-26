@@ -10,11 +10,13 @@ import PhoneInput from 'react-phone-input-2'
 import cls from './ConsultationModal.module.scss'
 
 interface ConsultationModalProps {
+	theme?: string
 	isOpen: boolean
 	handleClose: () => void
 }
 
 export const ConsultationModal = ({
+	theme = 'Консультация',
 	isOpen,
 	handleClose,
 }: ConsultationModalProps) => {
@@ -24,28 +26,28 @@ export const ConsultationModal = ({
 			phone: '',
 		},
 	})
-	const [isPolicy, setIsPolicy] = useState(true)
-	const [isPolicyErr, setIsPolicyErr] = useState(false)
+
+	const [isPhoneInvalid, setIsPhoneInvalid] = useState(false)
 	const router = useRouter()
 	const onSubmit = (data: any) => {
-		if (isPolicy) {
+		let formData = new FormData()
+		formData.append('username', data.username)
+		formData.append('phone', data.phone)
+		formData.append('theme', theme)
+		if (data.phone.length >= 11) {
 			axios
-				.post(`${process.env.domainUrl}/api/mail/consultModal`, data, {
+				.post(`${process.env.domainUrl}/api/mail/modal`, formData, {
 					headers: {
 						'Content-Type': 'multipart/form-data',
 					},
 				})
 				.then(res => {
-					setIsPolicyErr(false)
+					setIsPhoneInvalid(false)
 					router.push('/spasibo')
 				})
 		} else {
-			setIsPolicyErr(true)
+			setIsPhoneInvalid(true)
 		}
-	}
-
-	const handlePolicyChange = () => {
-		setIsPolicy(!isPolicy)
 	}
 
 	return (
@@ -86,6 +88,11 @@ export const ConsultationModal = ({
 							/>
 						)}
 					/>
+					{isPhoneInvalid ? (
+						<p className={cls.InvalidPhone}>
+							Номер телефона указан некорректно.
+						</p>
+					) : null}
 					<PrimaryButton type='submit' text='Отправить заявку' />
 				</form>
 			</div>

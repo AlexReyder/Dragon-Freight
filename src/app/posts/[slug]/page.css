@@ -1,0 +1,16 @@
+img {
+	width: 100%;
+	height: auto;
+}
+
+.post__title {
+	font-size: 4.2rem;
+	margin-bottom: 1rem;
+}
+
+.post__date {
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: var(--neutrals4);
+	margin-bottom: 4rem;
+}

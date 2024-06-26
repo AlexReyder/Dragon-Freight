@@ -76,6 +76,7 @@ export const Service = ({
 				</div>
 			</div>
 			<ConsultationModal
+				theme={title}
 				isOpen={isModalConsultOpen}
 				handleClose={handleModalClose}
 			/>

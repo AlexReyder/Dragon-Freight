@@ -36,7 +36,7 @@ export const HeroSection = () => {
 				</div>
 			</div>
 			<div className={cls.ImageContainer}>
-				<img src='/img/hero/china-map.svg' alt='' />
+				<img src='/img/hero/china-map.svg' alt='' loading='lazy' />
 			</div>
 			<ConsultationModal
 				isOpen={isModalConsultOpen}

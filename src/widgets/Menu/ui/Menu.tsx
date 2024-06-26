@@ -92,7 +92,7 @@ export const Menu = ({ className }: MenuProps) => {
 							</Link>
 						</li>
 						<li className='nav__list-item'>
-							<Link href='tel:+79035006651'>+7(903) 500-66-51</Link>
+							<Link href='tel:+79935906651'>+7(993) 590-66-51</Link>
 						</li>
 						<li className='nav__list-item'>
 							<Link href='mailto:info@dragonfreight.ru'>
@@ -101,7 +101,7 @@ export const Menu = ({ className }: MenuProps) => {
 						</li>
 						<li className='nav__list-item nav__list-item--messangers'>
 							<MessangerLink
-								to='https://wa.me/79035006651?text='
+								to='https://wa.me/79935906651?text='
 								className='f-c'
 								icon={<WhatsAppIcon className='nav__list-icon' />}
 							/>

@@ -1,0 +1,78 @@
+.Navigation {
+	display: flex !important;
+	@media only screen and (max-width: 37.5rem) {
+		margin-bottom: 4rem !important;
+	}
+}
+
+.Colored {
+	color: var(--color-primary);
+}
+
+.Card {
+	box-shadow: 0 5px 20px rgba(31, 47, 70, 0.12);
+	// padding: 2rem;
+	border-radius: 7px;
+	// background-color: #ffeded;
+}
+
+.CardText {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 500;
+	white-space: pre-line;
+	color: #222;
+}
+
+.LinkContainer {
+	margin-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	text-align: center;
+}
+
+.ImageWrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 7px;
+	& > img {
+		width: 100%;
+		height: 100%;
+		border-radius: 7px;
+		object-fit: cover;
+	}
+}
+
+.TelegramLink {
+	background-color: var(--color-secondary);
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 1rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	min-width: 280px;
+	height: 55px;
+	padding: 3rem 4rem;
+	border-radius: 10rem;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	// padding-right: 8rem;
+	transition: transform 0.3s ease-out;
+	animation: moveInBottom 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	}
+	@media only screen and (max-width: 56.25rem) {
+		padding: 2rem;
+	}
+	@media only screen and (max-width: 20rem) {
+		min-width: 236px;
+	}
+}

@@ -12,6 +12,7 @@ import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
 import cls from './CTASection.module.scss'
 interface CustomProjectProps {
+	theme?: string
 	className?: string
 	subtitle: strimg
 	title: any
@@ -19,6 +20,7 @@ interface CustomProjectProps {
 }
 
 export const CTASection = ({
+	theme = 'Консультация',
 	className,
 	subtitle,
 	title,
@@ -31,27 +33,29 @@ export const CTASection = ({
 		},
 	})
 
-	const [isPolicy, setIsPolicy] = useState(true)
-	const [isPolicyErr, setIsPolicyErr] = useState(false)
+	const [isPhoneInvalid, setIsPhoneInvalid] = useState(false)
 
 	const router = useRouter()
 
 	const onSubmit = (data: any) => {
-		if (isPolicy) {
+		let formData = new FormData()
+		formData.append('username', data.username)
+		formData.append('phone', data.phone)
+		formData.append('theme', theme)
+		if (data.phone.length >= 11) {
 			axios
-				.post(`${process.env.domainUrl}/api/mail/cta`, data, {
+				.post(`${process.env.domainUrl}/api/mail/modal`, formData, {
 					headers: {
 						'Content-Type': 'multipart/form-data',
 					},
 				})
 				.then(res => {
-					setIsPolicyErr(false)
-					router.push('/spasibo')
+					setIsPhoneInvalid(false)
+					// router.push('/spasibo')
 				})
-				// .then(response => router.push('/spasibo'))
 				.catch(e => console.log(e))
 		} else {
-			setIsPolicyErr(true)
+			setIsPhoneInvalid(true)
 		}
 	}
 
@@ -103,6 +107,11 @@ export const CTASection = ({
 									/>
 								)}
 							/>
+							{isPhoneInvalid ? (
+								<p className={cls.InvalidPhone}>
+									Номер телефона указан некорректно.
+								</p>
+							) : null}
 
 							<PrimaryButton
 								text='Отправить заявку'

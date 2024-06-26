@@ -17,14 +17,14 @@ export const Footer = ({ className = '' }) => {
 					</div>
 					<div className={`${cls.Contacts__entity} ${cls.Entity_2}`}>
 						<p className={cls.Title}>Номер телефона</p>
-						<a href='tel:+79035006651' className={`${cls.Email} link`}>
-							+7(903) 500-66-51
+						<a href='tel:+79935906651' className={`${cls.Email} link`}>
+							+7(993) 590-66-51
 						</a>
 					</div>
 					<div className={`${cls.Contacts__entity} ${cls.Entity_3}`}>
 						<p className={cls.Title}>Мессенджеры</p>
 						<a
-							href='https://wa.me/79035006651?text='
+							href='https://wa.me/79935906651?text='
 							className={`${cls.Messanger} link`}
 							target='_blank'
 						>

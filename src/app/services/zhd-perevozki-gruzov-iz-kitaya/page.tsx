@@ -5,7 +5,12 @@ import { HeroServiceSection } from '@/sections/SERVICES/HeroServiceSection/HeroS
 import { StepServiceSectionSection } from '@/sections/SERVICES/StepServiceSection/StepServiceSection'
 import { Footer } from '@/widgets/Footer'
 import { Header } from '@/widgets/Header'
+import { Metadata } from 'next'
 import cls from './page.module.scss'
+
+export const metadata: Metadata = {
+	title: 'Ж/Д перевозки грузов из Китая',
+}
 
 export default function ZDService() {
 	return (
@@ -107,6 +112,7 @@ export default function ZDService() {
 			</StepServiceSectionSection>
 
 			<CTASection
+				theme='Ж/Д перевозки'
 				title='Узнайте стоимость доставки вашего груза железнодорожным транспортом'
 				subtitle='Оставить заявку'
 				text='Оставьте заявку и наш менеджер свяжется с вами'

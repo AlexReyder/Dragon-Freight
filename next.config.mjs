@@ -10,11 +10,13 @@ const nextConfig = {
 	// 		},
 	// 	],
 	// },
-	// env: {
-	// 	domainUrl: process.env.DOMAIN,
-	// 	emailUser: process.env.EMAIL_LOGIN,
-	// 	emailPass: process.env.EMAIL_PASS,
-	// },
+	env: {
+		domainUrl: process.env.DOMAIN,
+		emailUser: process.env.EMAIL_LOGIN,
+		emailPass: process.env.EMAIL_PASS,
+		bitrixUser: process.env.BITRIX_USER,
+		bitrixKey: process.env.BITRIX_KEY,
+	},
 	// cacheBust: true,
 	typescript: {
 		ignoreBuildErrors: true,

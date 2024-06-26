@@ -5,7 +5,12 @@ import { HeroServiceSection } from '@/sections/SERVICES/HeroServiceSection/HeroS
 import { StepServiceSectionSection } from '@/sections/SERVICES/StepServiceSection/StepServiceSection'
 import { Footer } from '@/widgets/Footer'
 import { Header } from '@/widgets/Header'
+import { Metadata } from 'next'
 import cls from './page.module.scss'
+
+export const metadata: Metadata = {
+	title: 'Автоперевозки грузов из Китая',
+}
 
 export default function AutoService() {
 	return (
@@ -98,6 +103,7 @@ export default function AutoService() {
 			</StepServiceSectionSection>
 
 			<CTASection
+				theme='Автоперевозки'
 				title='Узнайте стоимость доставки вашего груза автомобильным  транспортом'
 				subtitle='Оставить заявку'
 				text='Оставьте заявку и наш менеджер свяжется с вами'

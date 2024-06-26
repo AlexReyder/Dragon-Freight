@@ -4,9 +4,9 @@ import { perspective } from './anim'
 
 const links = [
 	{
-		title: '+7(903) 500-66-51',
+		title: '+7(993) 590-66-51',
 
-		href: 'tel:+79035006651',
+		href: 'tel:+79935906651',
 	},
 
 	{
@@ -18,7 +18,7 @@ const links = [
 	{
 		title: 'WhatsApp',
 
-		href: 'https://wa.me/79035006651?text=',
+		href: 'https://wa.me/79935906651?text=',
 	},
 	{
 		title: 'Telegram',

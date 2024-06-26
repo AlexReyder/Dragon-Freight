@@ -2,7 +2,12 @@ import { Container } from '@/shared/ui/Layout/Container/Container'
 import { Headings } from '@/shared/ui/Layout/Headings/Headings'
 import { Footer } from '@/widgets/Footer'
 import { Header } from '@/widgets/Header'
+import { Metadata } from 'next'
 import cls from './page.module.scss'
+
+export const metadata: Metadata = {
+	title: 'Контакты',
+}
 
 export default function ContactsCompany() {
 	return (

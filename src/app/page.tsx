@@ -1,7 +1,9 @@
 import { AboutSection } from '@/sections/AboutSection'
+import { BetSection } from '@/sections/BetSection/BetSection'
 import { CTASection } from '@/sections/CTASection/CTASection'
 import { HeroSection } from '@/sections/HeroSection/HeroSection'
 import { MSProperties } from '@/sections/MSProperties'
+import { PostSection } from '@/sections/PostSection/PostSection'
 import { PrinciplesSection } from '@/sections/PrinciplesSection'
 import { ServicesSection } from '@/sections/ServicesSection'
 import { TelegramSection } from '@/sections/TelegramSection'
@@ -13,6 +15,7 @@ export default function Home() {
 			<Header />
 			<HeroSection />
 			<ServicesSection />
+			<BetSection />
 			<CTASection
 				title={
 					<span>
@@ -28,7 +31,7 @@ export default function Home() {
 			<PrinciplesSection />
 			<AboutSection />
 			<MSProperties />
-
+			<PostSection />
 			<CTASection
 				title='Быстрый расчет стоимости доставки'
 				subtitle='Оставить заявку'
