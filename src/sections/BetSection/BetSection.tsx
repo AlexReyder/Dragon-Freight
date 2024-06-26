@@ -46,42 +46,44 @@ export const BetSection = async () => {
 	}
 	return (
 		<Section>
-			<Container>
-				<Headings
-					title={
-						<span>
-							Актуальные <span className={cls.Colored}>ставки </span>
-						</span>
-					}
-					subtitle='Цены'
-				/>
-				<ArrowSlider controlClass={cls.Navigation} config={sliderConfig}>
-					{data.map((item: any) => {
-						return (
-							<div className={cls.Card}>
-								<div className={cls.ImageContainer}>
-									<Image
-										src='/img/bets/china.png'
-										alt='Актуальные ставки на доставку грузов из Китая'
-										width={48}
-										height={48}
-									/>
+			{Array.isArray(data) && data.length > 0 ? (
+				<Container>
+					<Headings
+						title={
+							<span>
+								Актуальные <span className={cls.Colored}>ставки </span>
+							</span>
+						}
+						subtitle='Цены'
+					/>
+					<ArrowSlider controlClass={cls.Navigation} config={sliderConfig}>
+						{data.map((item: any) => {
+							return (
+								<div className={cls.Card}>
+									<div className={cls.ImageContainer}>
+										<Image
+											src='/img/bets/china.png'
+											alt='Актуальные ставки на доставку грузов из Китая'
+											width={48}
+											height={48}
+										/>
+									</div>
+									<p className={cls.CardText}>{item.text}</p>
 								</div>
-								<p className={cls.CardText}>{item.text}</p>
-							</div>
-						)
-					})}
-				</ArrowSlider>
-				<div className={cls.LinkContainer}>
-					<Link
-						href='https://t.me/dragonfreight'
-						target='_blank'
-						className={cls.TelegramLink}
-					>
-						Перейти в телеграмм &nbsp;&nbsp; &rarr;
-					</Link>
-				</div>
-			</Container>
+							)
+						})}
+					</ArrowSlider>
+					<div className={cls.LinkContainer}>
+						<Link
+							href='https://t.me/dragonfreight'
+							target='_blank'
+							className={cls.TelegramLink}
+						>
+							Перейти в телеграмм &nbsp;&nbsp; &rarr;
+						</Link>
+					</div>
+				</Container>
+			) : null}
 		</Section>
 	)
 }

@@ -45,40 +45,42 @@ export const PostSection = async () => {
 	}
 	return (
 		<Section>
-			<Container>
-				<Headings
-					title={
-						<span>
-							Истории из <span className={cls.Colored}>жизни компании</span>
-						</span>
-					}
-					subtitle='Новости'
-				/>
-				<ArrowSlider controlClass={cls.Navigation} config={sliderConfig}>
-					{data.map((item: any) => {
-						return (
-							<div className={cls.Card}>
-								<div className={cls.ImageWrapper}>
-									<img src={item.thumbnail} alt={item.title} />
-								</div>
+			{Array.isArray(data) && data.length > 0 ? (
+				<Container>
+					<Headings
+						title={
+							<span>
+								Истории из <span className={cls.Colored}>жизни компании</span>
+							</span>
+						}
+						subtitle='Новости'
+					/>
+					<ArrowSlider controlClass={cls.Navigation} config={sliderConfig}>
+						{data.map((item: any) => {
+							return (
+								<div className={cls.Card}>
+									<div className={cls.ImageWrapper}>
+										<img src={item.thumbnail} alt={item.title} />
+									</div>
 
-								<p className={cls.CardText}>
-									{item.title}
-									{/* {item.text.replace('\n', '<br/>')} */}
-								</p>
-								<div className={cls.LinkContainer}>
-									<Link
-										href={`/posts/${item.slug}`}
-										className={cls.TelegramLink}
-									>
-										Читать &nbsp;&nbsp; &rarr;
-									</Link>
+									<p className={cls.CardText}>
+										{item.title}
+										{/* {item.text.replace('\n', '<br/>')} */}
+									</p>
+									<div className={cls.LinkContainer}>
+										<Link
+											href={`/posts/${item.slug}`}
+											className={cls.TelegramLink}
+										>
+											Читать &nbsp;&nbsp; &rarr;
+										</Link>
+									</div>
 								</div>
-							</div>
-						)
-					})}
-				</ArrowSlider>
-			</Container>
+							)
+						})}
+					</ArrowSlider>
+				</Container>
+			) : null}
 		</Section>
 	)
 }
