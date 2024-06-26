@@ -5,10 +5,9 @@ import AddIcon from '@mui/icons-material/Add'
 import { Button } from '@mui/material'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import AddNews from './AddNews'
 import SortableItem from './SortableItem'
 // import EditPalettesModal from './editModal'
-import EditNews from './EditNews'
+import dynamic from 'next/dynamic'
 import cls from './news.module.scss'
 
 const AdminNews = () => {
@@ -70,6 +69,14 @@ const AdminNews = () => {
 		setCurrentEditedId(id)
 	}
 
+	const DynamicAddNews = dynamic(() => import('./AddNews'), {
+		ssr: false,
+	})
+
+	const DynamicEditNews = dynamic(() => import('./EditNews'), {
+		ssr: false,
+	})
+
 	return (
 		<section>
 			<Header title='Новости' subtitle='Добавление и удаление новостей' />
@@ -102,14 +109,14 @@ const AdminNews = () => {
 					Добавить новость
 				</Button>
 			</div>
-			<AddNews
+			<DynamicAddNews
 				open={openModal}
 				handleClose={() => setModalOpen(false)}
 				updateData={updateData}
 			/>
 
 			{openEditModal ? (
-				<EditNews
+				<DynamicEditNews
 					open={openEditModal}
 					item={currentEditedId}
 					handleClose={() => setEditModalOpen(null)}
