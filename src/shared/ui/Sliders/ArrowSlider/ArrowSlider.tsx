@@ -108,6 +108,7 @@ export const Navigation = ({
 	return (
 		<div className={`${cls.Controls} ${controlClass}`}>
 			<button
+				aria-label='Назад'
 				className={`${cls.PrevSlideArrow} ${
 					currentSlide === 1 ? cls.DisabledArrow : ''
 				}`}
@@ -116,6 +117,7 @@ export const Navigation = ({
 				<ArrowIcon fill='#fff' />
 			</button>
 			<button
+				aria-label='Вперед'
 				className={`${cls.NextSlideArrow} ${
 					currentSlide === slidesLength ? cls.DisabledArrow : ''
 				}`}

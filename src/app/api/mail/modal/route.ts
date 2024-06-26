@@ -11,35 +11,33 @@ export async function POST(request: Request) {
 		`https://${process.env.bitrixUser}/rest/1/${process.env.bitrixKey}/crm.lead.add.json?FIELDS[TITLE]=${theme}&FIELDS[NAME]=${user}&FIELDS[LAST_NAME]=&FIELDS[EMAIL][0][VALUE]=&FIELDS[EMAIL][0][VALUE_TYPE]=&FIELDS[PHONE][0][VALUE]=${phone}&FIELDS[PHONE][0][VALUE_TYPE]=`
 	)
 
-	// const nodemailer = require('nodemailer')
+	const nodemailer = require('nodemailer')
 
-	// const transporter = nodemailer.createTransport({
-	// 	host: 'smtp.mail.ru',
-	// 	port: 465,
-	// 	// secure: true,
-	// 	auth: {
-	// 		// user: process.env.emailUser,
-	// 		// pass: process.env.emailPass,
-	// 		user: 'info@dragonfreight.ru',
-	// 		pass: '1xUUHUaue3p(',
-	// 	},
-	// })
+	const transporter = nodemailer.createTransport({
+		host: 'smtp.mail.ru',
+		port: 465,
+		secure: true,
+		auth: {
+			user: process.env.emailUser,
+			pass: process.env.emailPass,
+		},
+	})
 
-	// let message =
-	// 	'Имя: ' + user + '\n' + 'Номер телефона: ' + phone + '\n' + 'Цель: ' + theme
+	let message =
+		'Имя: ' + user + '\n' + 'Номер телефона: ' + phone + '\n' + 'Цель: ' + theme
 
-	// const mailOptions = {
-	// 	from: process.env.emailUser,
-	// 	to: process.env.emailUser,
-	// 	subject: 'Новая заявка',
-	// 	text: message,
-	// }
+	const mailOptions = {
+		from: '"Заявка" <info@dragonfreight.ru>',
+		to: 'info@dragonfreight.ru',
+		subject: 'Новая заявка',
+		text: message,
+	}
 
-	// transporter.sendMail(mailOptions, function (error: any, info: any) {
-	// 	if (error) {
-	// 		console.log(error)
-	// 	}
-	// })
+	transporter.sendMail(mailOptions, function (error: any, info: any) {
+		if (error) {
+			console.log(error)
+		}
+	})
 
 	return NextResponse.json('')
 }

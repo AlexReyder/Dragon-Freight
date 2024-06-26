@@ -1,4 +1,4 @@
-import ThankSection from '@/sections/ThankSection/ThankSection'
+import { HeroSecondarySection } from '@/sections/HeroSecondarySection/HeroSecondarySection'
 import { Footer } from '@/widgets/Footer'
 import { Header } from '@/widgets/Header'
 
@@ -7,7 +7,11 @@ export default function Custom404() {
 		<main>
 			<main>
 				<Header />
-				<ThankSection heading='404' />
+				<HeroSecondarySection
+					title='Ошибка 404'
+					subtitle='Страница не найдена.'
+					img='/img/hero/china-map.svg'
+				/>
 				<Footer />
 			</main>
 		</main>

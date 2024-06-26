@@ -18,9 +18,12 @@ export const PrinciplesSection = () => {
 					muted
 				>
 					<source src='/videos/hero.mp4' type='video/mp4' />
-					<meta itemProp='name' content='Name of the video' />
+					<meta itemProp='name' content='Dragon Freight' />
 					<meta itemProp='description' content='Description of the video...' />
-					<meta itemProp='duration' content='PT1M33S' />
+					<meta
+						itemProp='duration'
+						content='Доставка грузов из Китая по всей России'
+					/>
 					<meta itemProp='thumbnail' content='my-video-thumbnail-path.jpg' />
 				</video>
 			</div>

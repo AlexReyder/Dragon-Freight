@@ -8,7 +8,7 @@ import cls from './Header.module.scss'
 export const Header = () => {
 	return (
 		<header className={cls.Header}>
-			<Link href='/' className={cls.LogoBox}>
+			<Link href='/' className={cls.LogoBox} aria-label='Dragon Freight'>
 				<Logo />
 			</Link>
 

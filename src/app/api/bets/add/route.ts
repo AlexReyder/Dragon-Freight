@@ -12,10 +12,10 @@ export async function POST(request: Request) {
 	const text = res.text
 
 	const TelegramBot = require('node-telegram-bot-api')
-	const token = '5542695949:AAGYWDFHAwd48suQEjxRu1y0PnrtjjxyghY'
+	const token = '7436048359:AAFRIDhFdN31yGFn1g2D9MBmoo_Ix2Zy32M'
 	const bot = new TelegramBot(token, { polling: false })
 
-	bot.sendMessage('@tetestbotbet1', text)
+	bot.sendMessage('@dragonfreight', text)
 
 	let betResult = {
 		name: name,
