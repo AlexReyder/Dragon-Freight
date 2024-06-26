@@ -1,3 +1,4 @@
+import { BetSection } from '@/sections/BetSection/BetSection'
 import { CTASection } from '@/sections/CTASection/CTASection'
 import { AboutServiceSection } from '@/sections/SERVICES/AboutServiceSection/AboutServiceSection'
 import { AdvantagesServiceSection } from '@/sections/SERVICES/AdvantagesServiceSection/AdvantagesServiceSection'
@@ -37,6 +38,8 @@ export default function AutoService() {
 				img='/img/services/auto-delivery.svg'
 				alt='Автоперевозки грузов из Китая'
 			/>
+
+			<BetSection filter='avto' />
 
 			<StepServiceSectionSection
 				title='Этапы автомобильных грузоперевозок'

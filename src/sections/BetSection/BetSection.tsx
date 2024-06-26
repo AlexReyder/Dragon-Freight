@@ -20,10 +20,16 @@ async function getData() {
 	return res.json()
 }
 
-export const BetSection = async () => {
+interface BetProps {
+	filter?: string
+}
+
+export const BetSection = async ({ filter = '' }: BetProps) => {
 	let data = await getData()
-	console.log(data)
-	console.log(Array.isArray(data) && data.length > 0)
+	if (filter !== '' && data.length > 0) {
+		data = data.filter((el: any) => el.type === filter)
+	}
+
 	const sliderConfig = {
 		slidesPerView: 3,
 		spaceBetween: 30,

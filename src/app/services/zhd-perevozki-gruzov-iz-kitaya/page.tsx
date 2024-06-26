@@ -1,3 +1,4 @@
+import { BetSection } from '@/sections/BetSection/BetSection'
 import { CTASection } from '@/sections/CTASection/CTASection'
 import { AboutServiceSection } from '@/sections/SERVICES/AboutServiceSection/AboutServiceSection'
 import { AdvantagesServiceSection } from '@/sections/SERVICES/AdvantagesServiceSection/AdvantagesServiceSection'
@@ -34,6 +35,7 @@ export default function ZDService() {
 				alt='Железнодорожные перевозки грузов из Китая'
 			/>
 
+			<BetSection filter='zhd' />
 			<StepServiceSectionSection
 				title='Этапы перевозки груза ЖД транспортом'
 				subtitle=''

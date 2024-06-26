@@ -1,3 +1,4 @@
+import { BetSection } from '@/sections/BetSection/BetSection'
 import { CTASection } from '@/sections/CTASection/CTASection'
 import { AboutServiceSection } from '@/sections/SERVICES/AboutServiceSection/AboutServiceSection'
 import { AdvantagesServiceSection } from '@/sections/SERVICES/AdvantagesServiceSection/AdvantagesServiceSection'
@@ -37,6 +38,8 @@ export default function OceanService() {
 				img='/img/services/water-delivery.svg'
 				alt='Морская перевозка грузов из Китая'
 			/>
+
+			<BetSection filter='ocean' />
 
 			<StepServiceSectionSection
 				title='Этапы перевозки груза морским транспортом'

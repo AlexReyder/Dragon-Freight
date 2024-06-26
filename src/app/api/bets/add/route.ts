@@ -30,13 +30,15 @@ export async function POST(request: Request) {
 	const AllBets = fs.readFileSync('public/data/bets.json', 'utf-8')
 	const bet = JSON.parse(AllBets)
 	if (bet.length >= 10) {
-		const oldItem = bet.reduce(function (a, b) {
-			return a.date < b.date ? a : b
-		})
-		const oldItemIndex = bet.indexOf(oldItem)
-		bet[oldItemIndex] = betResult
+		bet.pop()
+		bet.unshift(betResult)
+		// const oldItem = bet.reduce(function (a, b) {
+		// 	return a.date < b.date ? a : b
+		// })
+		// const oldItemIndex = bet.indexOf(oldItem)
+		// bet[oldItemIndex] = betResult
 	} else {
-		bet.push(betResult)
+		bet.unshift(betResult)
 	}
 
 	let final = JSON.stringify(bet)
