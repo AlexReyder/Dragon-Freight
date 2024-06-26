@@ -10,7 +10,7 @@ import cls from './BetSection.module.scss'
 async function getData() {
 	'use server'
 
-	const res = await axios(`/api/bets/get`, {
+	const res = await axios(`${process.env}/api/bets/get`, {
 		headers: {
 			'Cache-Control': 'no-cache',
 			Pragma: 'no-cache',
