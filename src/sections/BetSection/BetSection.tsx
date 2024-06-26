@@ -2,21 +2,27 @@ import { Container } from '@/shared/ui/Layout/Container/Container'
 import { Headings } from '@/shared/ui/Layout/Headings/Headings'
 import { Section } from '@/shared/ui/Layout/Section/Section'
 import { ArrowSlider } from '@/shared/ui/Sliders/ArrowSlider/ArrowSlider'
+import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import cls from './BetSection.module.scss'
 
-const getData = async () => {
+async function getData() {
 	'use server'
 
-	const res = await fetch(`${process.env.domainUrl}/api/bets/get`, {
+	const res = await axios(`https://dragonfreight.ru/api/bets/get`, {
 		headers: {
 			'Cache-Control': 'no-cache',
 			Pragma: 'no-cache',
 			Expires: '0',
 		},
 	})
-	return await res.json()
+		.then(res => {
+			console.log(res.data)
+			return res.data
+		})
+		.catch(e => console.log(e))
+	return await res
 }
 
 export const BetSection = async () => {
@@ -53,16 +59,15 @@ export const BetSection = async () => {
 					{data.map((item: any) => {
 						return (
 							<div className={cls.Card}>
-								<Image
-									src='/img/bets/china.png'
-									alt='Актуальные ставки на доставку грузов из Китая'
-									width={48}
-									height={48}
-								/>
-								<p className={cls.CardText}>
-									{item.text}
-									{/* {item.text.replace('\n', '<br/>')} */}
-								</p>
+								<div className={cls.ImageContainer}>
+									<Image
+										src='/img/bets/china.png'
+										alt='Актуальные ставки на доставку грузов из Китая'
+										width={48}
+										height={48}
+									/>
+								</div>
+								<p className={cls.CardText}>{item.text}</p>
 							</div>
 						)
 					})}

@@ -2,20 +2,26 @@ import { Container } from '@/shared/ui/Layout/Container/Container'
 import { Headings } from '@/shared/ui/Layout/Headings/Headings'
 import { Section } from '@/shared/ui/Layout/Section/Section'
 import { ArrowSlider } from '@/shared/ui/Sliders/ArrowSlider/ArrowSlider'
+import axios from 'axios'
 import Link from 'next/link'
 import cls from './PostSection.module.scss'
 
-const getData = async () => {
+async function getData() {
 	'use server'
 
-	const res = await fetch(`${process.env.domainUrl}/api/news/get`, {
+	const res = await axios(`https://dragonfreight.ru/api/news/get`, {
 		headers: {
 			'Cache-Control': 'no-cache',
 			Pragma: 'no-cache',
 			Expires: '0',
 		},
 	})
-	return await res.json()
+		.then(res => {
+			console.log(res.data)
+			return res.data
+		})
+		.catch(e => console.log(e))
+	return await res
 }
 
 export const PostSection = async () => {
