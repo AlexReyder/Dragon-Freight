@@ -31,7 +31,7 @@ export const Footer = ({ className = '' }) => {
 							Whatsapp
 						</a>
 						<a
-							href='https://t.me/79035006651'
+							href='https://t.me/Dragon_Freight'
 							className={`${cls.Messanger} link`}
 							target='_blank'
 						>

@@ -23,7 +23,7 @@ const links = [
 	{
 		title: 'Telegram',
 
-		href: 'https://t.me/dragonfreight',
+		href: 'https://t.me/Dragon_Freight',
 	},
 ]
 

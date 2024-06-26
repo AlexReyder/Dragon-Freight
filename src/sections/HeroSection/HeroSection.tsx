@@ -38,7 +38,7 @@ export const HeroSection = () => {
 			<div className={cls.ImageContainer}>
 				<img
 					src='/img/hero/china-map.svg'
-					alt=''
+					alt='Доставка грузов из Китая'
 					loading='lazy'
 					decoding='async'
 				/>

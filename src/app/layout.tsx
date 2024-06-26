@@ -9,12 +9,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+	metadataBase: new URL(`https://dragonfreight.ru`),
 	title: {
 		template: '%s | Dragon Freight',
 		default: 'Доставка грузов из Китая по всей России | Dragon Freight',
 	},
 	description:
-		'Dragon Freight - логистическая компания, основным направлением работы которой являются грузоперевозки из Китая в Россию. Мы занимаемся доставкой и таможенным оформлением грузов, предоставляем услуги аутсорсинга ВЭД. Организуем перевозку груза воздушным, морским и наземным транспортом. ',
+		'Dragon Freight - логистическая компания, основным направлением работы которой являются грузоперевозки из Китая в Россию. Организуем перевозку груза воздушным, морским и наземным транспортом. ',
 	openGraph: {
 		title: 'Доставка грузов из Китая по всей России | Dragon Freight',
 		description:
@@ -45,6 +46,9 @@ export const metadata: Metadata = {
 			rel: 'apple-touch-icon-precomposed',
 			url: '/apple-touch-icon-precomposed.png',
 		},
+	},
+	alternates: {
+		canonical: './',
 	},
 }
 

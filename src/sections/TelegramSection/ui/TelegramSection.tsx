@@ -9,7 +9,11 @@ export const TelegramSection = () => {
 			<Container className={cls.Container}>
 				<div className={cls.D}>
 					{/* <LogoD className='S' /> */}
-					<Image src='/img/logo/D.svg' alt='' fill />
+					<Image
+						src='/img/logo/D.svg'
+						alt='Актуальные ставки на грузоперевозки'
+						fill
+					/>
 				</div>
 				<div className={cls.Follow}>
 					<h2 className={cls.Heading}>

@@ -51,16 +51,12 @@ export const CTASection = ({
 				})
 				.then(res => {
 					setIsPhoneInvalid(false)
-					// router.push('/spasibo')
+					router.push('/spasibo')
 				})
 				.catch(e => console.log(e))
 		} else {
 			setIsPhoneInvalid(true)
 		}
-	}
-
-	const handlePolicyChange = () => {
-		setIsPolicy(!isPolicy)
 	}
 
 	return (
