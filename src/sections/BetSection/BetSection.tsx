@@ -2,7 +2,6 @@ import { Container } from '@/shared/ui/Layout/Container/Container'
 import { Headings } from '@/shared/ui/Layout/Headings/Headings'
 import { Section } from '@/shared/ui/Layout/Section/Section'
 import { ArrowSlider } from '@/shared/ui/Sliders/ArrowSlider/ArrowSlider'
-import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import cls from './BetSection.module.scss'
@@ -10,22 +9,20 @@ import cls from './BetSection.module.scss'
 async function getData() {
 	'use server'
 
-	const res = await axios(`${process.env.DOMAIN}/api/bets/get`, {
-		headers: {
-			'Cache-Control': 'no-cache',
-			Pragma: 'no-cache',
-			Expires: '0',
-		},
+	const res = await fetch(`${process.env.DOMAIN}/api/bets/get`, {
+		cache: 'no-store',
 	})
-		.then(res => {
-			return res.data
-		})
-		.catch(e => console.log(e))
-	return await res
+
+	if (!res.ok) {
+		throw new Error('Failed')
+	}
+
+	return res.json()
 }
 
 export const BetSection = async () => {
 	let data = await getData()
+	console.log(data)
 	console.log(Array.isArray(data) && data.length > 0)
 	const sliderConfig = {
 		slidesPerView: 3,
