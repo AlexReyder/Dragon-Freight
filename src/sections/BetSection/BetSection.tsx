@@ -18,7 +18,6 @@ async function getData() {
 		},
 	})
 		.then(res => {
-			console.log(res.data)
 			return res.data
 		})
 		.catch(e => console.log(e))
@@ -27,6 +26,7 @@ async function getData() {
 
 export const BetSection = async () => {
 	let data = await getData()
+	console.log(Array.isArray(data) && data.length > 0)
 	const sliderConfig = {
 		slidesPerView: 3,
 		spaceBetween: 30,
