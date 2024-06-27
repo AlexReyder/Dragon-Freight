@@ -3,6 +3,7 @@
 	--font-size-text: 1.6rem;
 	--font-size-l: 2.4rem;
 	--font-size-section-heading: 4.2rem;
+	--mantine-scale: 3 !important;
 	@media only screen and (max-width: 42.1875rem) {
 		--font-size-section-heading: 4.2rem;
 	}

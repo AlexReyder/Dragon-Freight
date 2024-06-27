@@ -87,14 +87,14 @@ const theme = createTheme({
 	},
 	typography: {
 		fontFamily: ['Montserrat', 'sans-serif'].join(','),
-		fontSize: 20,
+		fontSize: 12,
 		h1: {
 			fontFamily: ['Montserrat', 'sans-serif'].join(','),
-			fontSize: 40,
+			fontSize: 32,
 		},
 		h2: {
 			fontFamily: ['Montserrat', 'sans-serif'].join(','),
-			fontSize: 32,
+			fontSize: 24,
 		},
 		h3: {
 			fontFamily: ['Montserrat', 'sans-serif'].join(','),
@@ -102,7 +102,7 @@ const theme = createTheme({
 		},
 		h4: {
 			fontFamily: ['Montserrat', 'sans-serif'].join(','),
-			fontSize: 20,
+			fontSize: 16,
 		},
 		h5: {
 			fontFamily: ['Montserrat', 'sans-serif'].join(','),
