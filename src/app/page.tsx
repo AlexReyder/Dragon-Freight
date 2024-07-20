@@ -5,6 +5,7 @@ import { HeroSection } from '@/sections/HeroSection/HeroSection'
 import { MSProperties } from '@/sections/MSProperties'
 import { PostSection } from '@/sections/PostSection/PostSection'
 import { PrinciplesSection } from '@/sections/PrinciplesSection'
+import { AdvantagesServiceSection } from '@/sections/SERVICES/AdvantagesServiceSection/AdvantagesServiceSection'
 import { ServicesSection } from '@/sections/ServicesSection'
 import { TelegramSection } from '@/sections/TelegramSection'
 import { Footer } from '@/widgets/Footer'
@@ -14,6 +15,14 @@ export default function Home() {
 		<main>
 			<Header />
 			<HeroSection />
+			<AdvantagesServiceSection
+				items={[
+					'Работаем с юридическими лицами: от продавцов на маркетплейсах до крупных предприятий',
+					'Доставим любую категорию товаров в полном объеме и целостности ',
+					'Проведем груз через таможню. Правильно оформим все документы',
+					'Составим договор на оказание услуг. Зафиксируем сроки доставки и гарантии',
+				]}
+			/>
 			<ServicesSection />
 			<BetSection />
 			<CTASection
